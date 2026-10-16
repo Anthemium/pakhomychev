@@ -599,6 +599,65 @@ textarea:focus {
 
 .source a { font-weight: 600; }
 
+.doc h2 {
+  font-size: 26px;
+  margin: 36px 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.doc h2 + p,
+.doc p { max-width: 46em; }
+
+.doc ol,
+.doc ul { max-width: 46em; padding-left: 1.2em; }
+
+.doc li { margin: 6px 0; }
+
+.doc-approve {
+  margin: 20px 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.sheet {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 8px;
+  font-size: 15px;
+}
+
+.sheet th,
+.sheet td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.sheet th {
+  background: var(--band);
+  font-weight: 700;
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .skip,
+  .page-more,
+  .menu-btn { display: none !important; }
+
+  body { padding-top: 0; background: #fff; }
+
+  .section { padding: 0; }
+
+  .doc h1 { font-size: 28px; }
+
+  .sheet,
+  .doc h2 { break-inside: avoid; }
+
+  a { color: inherit; text-decoration: none; }
+}
+
 :focus-visible {
   outline: 2px solid var(--navy);
   outline-offset: 3px;
