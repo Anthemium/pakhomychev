@@ -473,6 +473,58 @@ textarea:focus {
 
 .legal-main p { font-size: 18px; }
 
+#b2b,
+#smart,
+#ai,
+#system,
+#cases,
+#proof,
+#about,
+#contact { scroll-margin-top: calc(var(--header) + 12px); }
+
+.system-follow { margin-top: 72px; }
+
+.system-stack { display: grid; gap: 16px; }
+
+.system-block {
+  display: grid;
+  grid-template-columns: minmax(168px, 230px) minmax(0, 1fr);
+  gap: 12px 36px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 28px;
+}
+
+.system-block h3 { margin: 0; font-size: 22px; }
+
+.system-block p { margin: 0 0 12px; }
+
+.system-block p:last-child { margin-bottom: 0; }
+
+.system-points {
+  display: grid;
+  gap: 0;
+  margin: 4px 0 0;
+}
+
+.system-points div {
+  display: grid;
+  grid-template-columns: minmax(148px, 210px) minmax(0, 1fr);
+  gap: 4px 18px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.system-points div:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.system-points dt { margin: 0; font-weight: 700; }
+
+.system-points dd { margin: 0; }
+
 :focus-visible {
   outline: 2px solid var(--navy);
   outline-offset: 3px;
@@ -513,7 +565,9 @@ textarea:focus {
   .offer-grid,
   .case-grid,
   .proof-split,
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid,
+  .system-block,
+  .system-points div { grid-template-columns: 1fr; }
 
   .section { padding: 56px 0; }
 
