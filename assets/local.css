@@ -114,13 +114,13 @@ h3 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.02em; }
 
 .header-inner {
   position: relative;
-  width: min(1280px, calc(100% - 40px));
+  width: min(1180px, calc(100% - 48px));
   height: var(--header);
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 28px;
+  gap: 64px;
 }
 
 .brand {
