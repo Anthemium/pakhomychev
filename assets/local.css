@@ -114,16 +114,17 @@ h3 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.02em; }
 
 .header-inner {
   position: relative;
-  width: min(1180px, calc(100% - 48px));
+  width: min(1280px, calc(100% - 40px));
   height: var(--header);
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 18px;
+  gap: 28px;
 }
 
 .brand {
+  flex: 0 0 auto;
   color: var(--ink);
   text-decoration: none;
   font-weight: 700;
@@ -162,25 +163,64 @@ h3 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.02em; }
 }
 
 .header-panel {
-  margin-left: auto;
+  flex: 1 1 auto;
+  min-width: 0;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  min-width: 0;
-  gap: 12px;
+  gap: 28px;
 }
 
-.nav { display: flex; gap: 8px; flex-wrap: wrap; }
+.site-nav {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  gap: 22px;
+  margin-right: auto;
+  min-width: max-content;
+}
 
-.header-panel .nav { flex-wrap: nowrap; }
-
-.header-panel .nav a {
-  padding: 8px 12px;
-  font-size: 14px;
+.site-nav a {
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  padding: 0;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
   white-space: nowrap;
 }
 
-.header-panel .btn-primary { padding: 12px 18px; }
+.site-nav a:hover {
+  background: none;
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.site-nav a[aria-current="page"] {
+  background: none;
+  color: var(--navy);
+  border: 0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.site-nav a[aria-current="page"]:hover {
+  background: none;
+  color: var(--navy);
+}
+
+.header-panel .btn-primary {
+  flex: 0 0 auto;
+  padding: 12px 18px;
+}
+
+.nav { display: flex; gap: 8px; flex-wrap: wrap; }
 
 .nav a,
 .btn-line {
@@ -220,6 +260,7 @@ a.offer:hover { border-color: var(--navy); }
 .page-more { margin-top: 28px; }
 
 .header-phone {
+  flex: 0 0 auto;
   color: var(--ink);
   text-decoration: none;
   font-weight: 700;
@@ -584,7 +625,12 @@ textarea:focus {
 
   .menu-check:checked ~ .header-panel { display: flex; }
 
-  .nav { flex-direction: column; }
+  .nav,
+  .site-nav { flex-direction: column; align-items: flex-start; }
+
+  .site-nav { min-width: 0; margin-right: 0; gap: 14px; }
+
+  .site-nav a { font-size: 16px; }
 
   .header-phone,
   .header-panel .btn-primary { text-align: center; }
