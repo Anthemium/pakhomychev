@@ -1,0 +1,11 @@
+# Previous Tilda export and resume scratch stay on this computer.
+_archive/
+_resume_extract.txt
+assets/cdn/
+tilda-fallback-advanced-1.0.min.js
+*.pdf
+.env
+.env.*
+Thumbs.db
+Desktop.ini
+.DS_Store
