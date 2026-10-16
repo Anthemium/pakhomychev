@@ -736,6 +736,8 @@ textarea:focus {
 
 .board-switch { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 
+.section-head .board-switch { margin-top: 22px; }
+
 .board-switch button {
   border: 0;
   background: none;
