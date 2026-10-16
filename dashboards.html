@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Примеры дашбордов — Михаил Пахомычев</title>
-  <meta name="description" content="Открытые репозитории дашбордов: какое решение поддерживает экран и какой набор метрик в нём собран.">
+  <meta name="description" content="Учебный контур управления продажами B2B и открытые репозитории дашбордов.">
   <link rel="canonical" href="https://anthemium.github.io/pakhomychev/dashboards.html">
   <meta property="og:title" content="Примеры дашбордов">
-  <meta property="og:description" content="Открытые репозитории дашбордов: какое решение поддерживает экран и какой набор метрик в нём собран.">
+  <meta property="og:description" content="Учебный контур управления продажами B2B и открытые репозитории дашбордов.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://anthemium.github.io/pakhomychev/dashboards.html">
   <meta property="og:image" content="https://anthemium.github.io/pakhomychev/assets/photos/mihail.png">
@@ -39,71 +39,108 @@
     <section class="section">
       <div class="wrap">
         <div class="section-head">
+          <p class="kicker">Учебный контур</p>
+          <h1>Управление продажами B2B</h1>
+          <p class="lead">Учебный контур. Цифры демонстрационные, не результаты клиентов.</p>
+        </div>
+        <div class="board" id="board">
+          <div class="board-bar">
+            <div class="board-switch" role="group" aria-label="Период">
+              <button type="button" data-period="month">Месяц</button>
+              <button type="button" data-period="quarter">Квартал</button>
+              <button type="button" data-period="year" aria-pressed="true">Год</button>
+            </div>
+            <div class="board-switch" role="group" aria-label="Сегмент">
+              <button type="button" data-segment="all" aria-pressed="true">Все сегменты</button>
+              <button type="button" data-segment="equip">Оборудование</button>
+              <button type="button" data-segment="service">Сервис</button>
+              <button type="button" data-segment="license">Лицензии</button>
+              <button type="button" data-segment="project">Проекты</button>
+            </div>
+            <p class="board-caption" id="board-caption"></p>
+          </div>
+          <div class="kpi-grid" id="board-kpi"></div>
+          <div class="board-main">
+            <article class="board-card">
+              <h2>Воронка</h2>
+              <div id="board-funnel"></div>
+              <div id="board-stage"></div>
+            </article>
+            <article class="board-card">
+              <h2>Прогноз и план</h2>
+              <p class="board-legend"><i class="is-plan"></i>План <i></i>Факт <i class="is-forecast"></i>Наиболее вероятный</p>
+              <div class="board-chart" id="board-chart"></div>
+            </article>
+          </div>
+          <div class="board-rest">
+            <article class="board-card">
+              <h2>Возраст пайплайна</h2>
+              <div id="board-age"></div>
+            </article>
+            <article class="board-card">
+              <h2>Причины победы и отказа</h2>
+              <div id="board-reasons"></div>
+            </article>
+            <article class="board-card board-span">
+              <h2>Нагрузка продавцов</h2>
+              <div id="board-sellers"></div>
+            </article>
+            <article class="board-card">
+              <h2>Опережающие</h2>
+              <div class="lead-grid" id="board-leading"></div>
+            </article>
+            <article class="board-card">
+              <h2>Скидка и маржа</h2>
+              <div id="board-margin"></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="wrap">
+        <div class="section-head repos-head">
           <p class="kicker">Открытый код</p>
-          <h1>Примеры дашбордов</h1>
-          <p class="lead">Публичные репозитории, содержимое которых проверено по README или по файлам примера.</p>
-          <p>Это не отчёты клиентов. Учебные суммы из датасетов сюда не переносятся. Скриншоты из репозиториев без ясной лицензии на переиспользование на страницу не ставились.</p>
+          <h2>Репозитории</h2>
+          <p class="lead">Публичные примеры. Их учебные суммы на этот экран не переносятся.</p>
         </div>
         <div class="stack">
-<article class="case">
-            <p class="when">Apache Superset · Apache-2.0 · пример в дереве проекта</p>
+          <article class="case">
+            <p class="when">Apache Superset · Apache-2.0</p>
             <h3>Sales Dashboard</h3>
-            <p>Решение: где сосредоточена выручка по линейке и размеру сделки в учебном каталоге. В манифесте дашборда — выручка, число проданных позиций, квартальная выручка, доля выручки по линейке, выручка по размеру сделки, сезонность, статус заказа. Фильтры: страна, штат, индекс, количество, диапазон дат, MSRP. Авторский текст примера прямо указывает: это продажи техники на выборке заказов 2003–2005 годов, не живая CRM.</p>
-            <ul>
-              <li>Запаздывающие: выручка, количество, структура по продукту.</li>
-              <li>Опережающие пайплайна — покрытие, конверсия этапов, точность прогноза — в этом примере не собраны.</li>
-            </ul>
-            <p class="source">Стек: Apache Superset. <a href="https://github.com/apache/superset/tree/master/superset/examples/sales_dashboard">github.com/apache/superset · examples/sales_dashboard</a></p>
+            <p>Выручка учебного каталога техники за 2003–2005 годы: линейка, размер сделки, сезонность. Это не живая CRM и не покрытие пайплайна.</p>
+            <p class="source"><a href="https://github.com/apache/superset/tree/master/superset/examples/sales_dashboard">github.com/apache/superset · examples/sales_dashboard</a></p>
           </article>
           <article class="case">
             <p class="when">Flask · карточка возможности</p>
             <h3>Sales Pipeline Dashboard</h3>
-            <p>Решение: какие открытые возможности входят в прогноз и как распределена нагрузка по продавцам. В схеме репозитория у возможности есть сумма, вероятность, этап и ожидаемая дата закрытия. Отчёты README: разрез по этапам, результат по представителю, расчёт прогноза выручки.</p>
-            <ul>
-              <li>Запаздывающие в этом приложении не выделены отдельным блоком факта.</li>
-              <li>Опережающие: этап, вероятность, ожидаемая дата, прогноз выручки.</li>
-            </ul>
-            <p class="source">Стек: Python, Flask, SQLite, SQLAlchemy. Публичного деплоя в README нет. <a href="https://github.com/Nabbonnita-ECS/SalesPipelineDashboard">github.com/Nabbonnita-ECS/SalesPipelineDashboard</a></p>
+            <p>Открытые возможности: сумма, вероятность, этап, ожидаемая дата закрытия, разрез по представителю и прогноз выручки.</p>
+            <p class="source"><a href="https://github.com/Nabbonnita-ECS/SalesPipelineDashboard">github.com/Nabbonnita-ECS/SalesPipelineDashboard</a></p>
           </article>
           <article class="case">
-            <p class="when">Power BI · файл .pbix в репозитории</p>
+            <p class="when">Power BI · файл .pbix</p>
             <h3>Sales Pipeline Dashboard, учебный разбор 2017</h3>
-            <p>Решение, которое README называет целью файла: здоровье воронки, квартальный и месячный ход возможностей и выручки, аллокация по региону, продукту и сектору. Заявленный набор: выручка, число возможностей, доля успеха, длина цикла в днях. Автор сам отмечает ограничение данных: в выборке возможности помечены как выигранные. Суммы из README на эту страницу не переносятся.</p>
-            <ul>
-              <li>Запаздывающие: выручка, доля успеха, длина цикла.</li>
-              <li>Опережающие: возможности по этапам и периодам. Точность прогноза в README не описана.</li>
-            </ul>
-            <p class="source">Стек: Power BI. <a href="https://github.com/yogesh8536/Sales-Pipeline-Dashboard">github.com/yogesh8536/Sales-Pipeline-Dashboard</a></p>
+            <p>Воронка, ход возможностей и выручки, доля успеха и длина цикла. В выборке README возможности помечены как выигранные.</p>
+            <p class="source"><a href="https://github.com/yogesh8536/Sales-Pipeline-Dashboard">github.com/yogesh8536/Sales-Pipeline-Dashboard</a></p>
           </article>
           <article class="case">
-            <p class="when">Streamlit · розничная выгрузка Excel</p>
+            <p class="when">Streamlit · розничная выгрузка</p>
             <h3>Sales Dashboard, Sven Bosau</h3>
-            <p>Решение: операционный контроль транзакционной точки, не квота B2B. В коде приложения три показателя шапки — сумма продаж, средняя оценка, средний чек транзакции — и два разреза: линейка продуктов и час. Источник данных в коде: файл supermarkt_sales.xlsx.</p>
-            <ul>
-              <li>Запаздывающие: сумма, средний чек, оценка.</li>
-              <li>Покрытие пайплайна, конверсия этапов, win rate и точность прогноза в коде не считаются. Пример полезен как граница: дашборд продаж и дашборд отдела B2B — разные объекты.</li>
-            </ul>
-            <p class="source">Стек: Python, Streamlit, Plotly, pandas. <a href="https://github.com/Sven-Bo/streamlit-sales-dashboard">Репозиторий</a> · <a href="https://www.salesdashboard.pythonandvba.com/">демо</a></p>
+            <p>Сумма продаж, средняя оценка и средний чек транзакции по файлу supermarkt_sales.xlsx. Это не квота отдела B2B.</p>
+            <p class="source"><a href="https://github.com/Sven-Bo/streamlit-sales-dashboard">Репозиторий</a> · <a href="https://www.salesdashboard.pythonandvba.com/">демо</a></p>
           </article>
           <article class="case">
-            <p class="when">Streamlit · прогноз спроса</p>
+            <p class="when">Streamlit · прогноз ряда</p>
             <h3>AI Sales Forecasting Dashboard</h3>
-            <p>Решение: как двигаются продажи, прибыль, заказы и скидка в электронной коммерции и каким будет ряд дальше. README фиксирует фильтры по дате, региону и категории и прогноз Prophet. Это прогноз временного ряда, не категории прогноза сделки.</p>
-            <ul>
-              <li>Запаздывающие: продажи, прибыль, заказы, скидки.</li>
-              <li>Опережающий объект — прогноз ряда. Win rate, цикл сделки и покрытие квоты в описании нет.</li>
-            </ul>
-            <p class="source">Стек: Streamlit, Plotly, Prophet, pandas. <a href="https://github.com/anshkumar2311/AI-Powered-Sales-Forecasting-Dashboard">Репозиторий</a> · <a href="https://aisalesforecasting.streamlit.app/">демо</a></p>
+            <p>Продажи, прибыль, заказы и скидка электронной коммерции плюс прогноз Prophet. Это не категория прогноза сделки.</p>
+            <p class="source"><a href="https://github.com/anshkumar2311/AI-Powered-Sales-Forecasting-Dashboard">Репозиторий</a> · <a href="https://aisalesforecasting.streamlit.app/">демо</a></p>
           </article>
           <article class="case">
             <p class="when">Streamlit · MIT</p>
             <h3>MarketIQ</h3>
-            <p>Решение: операционная картина выручки и заказов плюс горизонт на шесть месяцев. README описывает KPI выручки, заказов и клиентской активности и прогноз Prophet по истории продаж. Покрытие квоты и конверсия этапов в описании не заданы.</p>
-            <ul>
-              <li>Запаздывающие: выручка, заказы, активность клиентов.</li>
-              <li>Опережающий объект — шестимесячный прогноз ряда.</li>
-            </ul>
-            <p class="source">Стек: Streamlit, SQLAlchemy, SQLite или PostgreSQL, Plotly, Prophet. Лицензия MIT. <a href="https://github.com/AmirhosseinHonardoust/Market-IQ">github.com/AmirhosseinHonardoust/Market-IQ</a></p>
+            <p>Выручка, заказы и активность клиентов, прогноз ряда на шесть месяцев. Покрытие квоты и конверсия этапов в описании не заданы.</p>
+            <p class="source"><a href="https://github.com/AmirhosseinHonardoust/Market-IQ">github.com/AmirhosseinHonardoust/Market-IQ</a></p>
           </article>
         </div>
         <nav class="nav page-more" aria-label="Другие разделы">
@@ -142,5 +179,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/dashboard-data.js"></script>
+  <script src="js/dashboard.js"></script>
 </body>
 </html>
