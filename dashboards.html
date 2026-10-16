@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Примеры дашбордов — Михаил Пахомычев</title>
+  <meta name="description" content="Открытые репозитории дашбордов: какое решение поддерживает экран и какой набор метрик в нём собран.">
+  <link rel="canonical" href="https://anthemium.github.io/pakhomychev/dashboards.html">
+  <meta property="og:title" content="Примеры дашбордов">
+  <meta property="og:description" content="Открытые репозитории дашбордов: какое решение поддерживает экран и какой набор метрик в нём собран.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anthemium.github.io/pakhomychev/dashboards.html">
+  <meta property="og:image" content="https://anthemium.github.io/pakhomychev/assets/photos/mihail.png">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="assets/local.css">
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Михаил Пахомычев<small>B2B-продажи</small></a>
+      <input class="menu-check" id="menu" type="checkbox">
+      <label class="menu-btn" for="menu">Меню</label>
+      <div class="header-panel">
+        <nav class="nav" aria-label="Направления">
+          <a href="index.html#b2b">B2B под ключ</a>
+          <a href="index.html#smart">Smart Sales</a>
+          <a href="index.html#ai">AI-трансформация</a>
+        </nav>
+        <nav class="nav platform-nav-mobile" aria-label="Разделы платформы">
+          <a href="index.html">Главная</a>
+          <a href="management.html">Архитектура</a>
+          <a href="dashboards.html" aria-current="page">Дашборды</a>
+          <a href="international.html">Международные примеры</a>
+          <a href="industries.html">Отрасли</a>
+        </nav>
+        <a class="header-phone" href="tel:+79952295580">+7 995 229-55-80</a>
+        <a class="btn-primary" href="https://t.me/nice_one_mike">Обсудить задачу</a>
+      </div>
+    </div>
+    <div class="platform-bar">
+      <div class="platform-bar-inner">
+        <nav class="nav" aria-label="Платформа">
+          <a href="index.html">Главная</a>
+          <a href="management.html">Архитектура</a>
+          <a href="dashboards.html" aria-current="page">Дашборды</a>
+          <a href="international.html">Международные примеры</a>
+          <a href="industries.html">Отрасли</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Открытый код</p>
+          <h1>Примеры дашбордов</h1>
+          <p class="lead">Публичные репозитории, содержимое которых проверено по README или по файлам примера.</p>
+          <p>Это не отчёты клиентов. Учебные суммы из датасетов сюда не переносятся. Скриншоты из репозиториев без ясной лицензии на переиспользование на страницу не ставились.</p>
+        </div>
+        <div class="stack">
+<article class="case">
+            <p class="when">Apache Superset · Apache-2.0 · пример в дереве проекта</p>
+            <h3>Sales Dashboard</h3>
+            <p>Решение: где сосредоточена выручка по линейке и размеру сделки в учебном каталоге. В манифесте дашборда — выручка, число проданных позиций, квартальная выручка, доля выручки по линейке, выручка по размеру сделки, сезонность, статус заказа. Фильтры: страна, штат, индекс, количество, диапазон дат, MSRP. Авторский текст примера прямо указывает: это продажи техники на выборке заказов 2003–2005 годов, не живая CRM.</p>
+            <ul>
+              <li>Запаздывающие: выручка, количество, структура по продукту.</li>
+              <li>Опережающие пайплайна — покрытие, конверсия этапов, точность прогноза — в этом примере не собраны.</li>
+            </ul>
+            <p class="source">Стек: Apache Superset. <a href="https://github.com/apache/superset/tree/master/superset/examples/sales_dashboard">github.com/apache/superset · examples/sales_dashboard</a></p>
+          </article>
+          <article class="case">
+            <p class="when">Flask · карточка возможности</p>
+            <h3>Sales Pipeline Dashboard</h3>
+            <p>Решение: какие открытые возможности входят в прогноз и как распределена нагрузка по продавцам. В схеме репозитория у возможности есть сумма, вероятность, этап и ожидаемая дата закрытия. Отчёты README: разрез по этапам, результат по представителю, расчёт прогноза выручки.</p>
+            <ul>
+              <li>Запаздывающие в этом приложении не выделены отдельным блоком факта.</li>
+              <li>Опережающие: этап, вероятность, ожидаемая дата, прогноз выручки.</li>
+            </ul>
+            <p class="source">Стек: Python, Flask, SQLite, SQLAlchemy. Публичного деплоя в README нет. <a href="https://github.com/Nabbonnita-ECS/SalesPipelineDashboard">github.com/Nabbonnita-ECS/SalesPipelineDashboard</a></p>
+          </article>
+          <article class="case">
+            <p class="when">Power BI · файл .pbix в репозитории</p>
+            <h3>Sales Pipeline Dashboard, учебный разбор 2017</h3>
+            <p>Решение, которое README называет целью файла: здоровье воронки, квартальный и месячный ход возможностей и выручки, аллокация по региону, продукту и сектору. Заявленный набор: выручка, число возможностей, доля успеха, длина цикла в днях. Автор сам отмечает ограничение данных: в выборке возможности помечены как выигранные. Суммы из README на эту страницу не переносятся.</p>
+            <ul>
+              <li>Запаздывающие: выручка, доля успеха, длина цикла.</li>
+              <li>Опережающие: возможности по этапам и периодам. Точность прогноза в README не описана.</li>
+            </ul>
+            <p class="source">Стек: Power BI. <a href="https://github.com/yogesh8536/Sales-Pipeline-Dashboard">github.com/yogesh8536/Sales-Pipeline-Dashboard</a></p>
+          </article>
+          <article class="case">
+            <p class="when">Streamlit · розничная выгрузка Excel</p>
+            <h3>Sales Dashboard, Sven Bosau</h3>
+            <p>Решение: операционный контроль транзакционной точки, не квота B2B. В коде приложения три показателя шапки — сумма продаж, средняя оценка, средний чек транзакции — и два разреза: линейка продуктов и час. Источник данных в коде: файл supermarkt_sales.xlsx.</p>
+            <ul>
+              <li>Запаздывающие: сумма, средний чек, оценка.</li>
+              <li>Покрытие пайплайна, конверсия этапов, win rate и точность прогноза в коде не считаются. Пример полезен как граница: дашборд продаж и дашборд отдела B2B — разные объекты.</li>
+            </ul>
+            <p class="source">Стек: Python, Streamlit, Plotly, pandas. <a href="https://github.com/Sven-Bo/streamlit-sales-dashboard">Репозиторий</a> · <a href="https://www.salesdashboard.pythonandvba.com/">демо</a></p>
+          </article>
+          <article class="case">
+            <p class="when">Streamlit · прогноз спроса</p>
+            <h3>AI Sales Forecasting Dashboard</h3>
+            <p>Решение: как двигаются продажи, прибыль, заказы и скидка в электронной коммерции и каким будет ряд дальше. README фиксирует фильтры по дате, региону и категории и прогноз Prophet. Это прогноз временного ряда, не категории прогноза сделки.</p>
+            <ul>
+              <li>Запаздывающие: продажи, прибыль, заказы, скидки.</li>
+              <li>Опережающий объект — прогноз ряда. Win rate, цикл сделки и покрытие квоты в описании нет.</li>
+            </ul>
+            <p class="source">Стек: Streamlit, Plotly, Prophet, pandas. <a href="https://github.com/anshkumar2311/AI-Powered-Sales-Forecasting-Dashboard">Репозиторий</a> · <a href="https://aisalesforecasting.streamlit.app/">демо</a></p>
+          </article>
+          <article class="case">
+            <p class="when">Streamlit · MIT</p>
+            <h3>MarketIQ</h3>
+            <p>Решение: операционная картина выручки и заказов плюс горизонт на шесть месяцев. README описывает KPI выручки, заказов и клиентской активности и прогноз Prophet по истории продаж. Покрытие квоты и конверсия этапов в описании не заданы.</p>
+            <ul>
+              <li>Запаздывающие: выручка, заказы, активность клиентов.</li>
+              <li>Опережающий объект — шестимесячный прогноз ряда.</li>
+            </ul>
+            <p class="source">Стек: Streamlit, SQLAlchemy, SQLite или PostgreSQL, Plotly, Prophet. Лицензия MIT. <a href="https://github.com/AmirhosseinHonardoust/Market-IQ">github.com/AmirhosseinHonardoust/Market-IQ</a></p>
+          </article>
+        </div>
+        <nav class="nav page-more" aria-label="Другие разделы">
+          <a href="index.html">Главная</a>
+          <a href="management.html">Архитектура</a>
+          <a href="international.html">Международные примеры</a>
+          <a href="industries.html">Отрасли</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>Михаил Пахомычев</strong>
+        <p>Черновик личного сайта. Политика персональных данных и реквизиты появятся, когда будет определено юридическое лицо, от имени которого принимаются обращения.</p>
+      </div>
+      <div>
+        <a href="index.html">Главная</a>
+        <a href="index.html#b2b">B2B под ключ</a>
+        <a href="index.html#smart">Smart Sales</a>
+        <a href="index.html#ai">AI-трансформация</a>
+        <a href="management.html">Архитектура</a>
+        <a href="dashboards.html">Дашборды</a>
+        <a href="international.html">Международные примеры</a>
+        <a href="industries.html">Отрасли</a>
+        <a href="index.html#cases">Разборы</a>
+        <a href="index.html#about">О практике</a>
+      </div>
+      <div>
+        <a href="legal/privacy.html">Персональные данные</a>
+        <a href="legal/pd-consent.html">Согласие на обработку</a>
+        <a href="legal/mailing-consent.html">Рассылка</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
