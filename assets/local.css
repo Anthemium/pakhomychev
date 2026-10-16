@@ -477,6 +477,10 @@ textarea:focus {
 #smart,
 #ai,
 #system,
+#practice,
+#dashboards,
+#world,
+#industries,
 #cases,
 #proof,
 #about,
@@ -504,6 +508,22 @@ textarea:focus {
 }
 
 .category-list li:nth-child(-n+2) { border-top: 0; }
+
+.section-nav { margin-bottom: 8px; }
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.source {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.source a { font-weight: 600; }
 
 :focus-visible {
   outline: 2px solid var(--navy);
@@ -546,7 +566,8 @@ textarea:focus {
   .case-grid,
   .proof-split,
   .footer-grid,
-  .category-list { grid-template-columns: 1fr; }
+  .category-list,
+  .topic-grid { grid-template-columns: 1fr; }
 
   .category-list li:nth-child(2) { border-top: 1px solid var(--line); }
 
